@@ -105,8 +105,17 @@ npm i -g @nestjs/cli
 nest new greeno-backend
 cd greeno-backend
 
+npm install @nestjs/typeorm typeorm pg bcrypt
+npm install class-validator class-transformer
+npm install -D @types/bcrypt
+
 # Cài đặt các package quan trọng cho API và documentation
 npm install @nestjs/swagger swagger-ui-express class-validator class-transformer
 npm install @nestjs/mongoose mongoose # Nếu dùng MongoDB
 # hoặc
 npm install @nestjs/typeorm typeorm pg # Nếu dùng PostgreSQL
+
+# Sử dụng Nest CLI để tạo module products với đầy đủ thành phần
+nest generate module products
+nest generate controller products
+nest generate service products
